@@ -13,21 +13,47 @@ list9=['which he famously did best while working alone','manner reminiscent of w
 list=[list1,list2,list3,list4,list5,list6,list7,list8,list9]
 
 boolean=True
- 
+r1=1
+
 while boolean:
-    r1=random.randrange(1,9)
-    mainlist=list[r1]
+    Pnumber=input('\n\n\n\n\n\n문제번호 입력(랜덤 출제는 r 입력)\n')
+    print(Pnumber)
+    if Pnumber=='1':
+        r1=int(Pnumber)-1
+    elif Pnumber=='2':
+        r1=int(Pnumber)-1
+    elif Pnumber=='3':
+        r1=int(Pnumber)-1
+    elif Pnumber=='4':
+        r1=int(Pnumber)-1
+    elif Pnumber=='5':
+        r1=int(Pnumber)-1
+    elif Pnumber=='6':
+        r1=int(Pnumber)-1
+    elif Pnumber=='7':
+        r1=int(Pnumber)-1
+    elif Pnumber=='8':
+        r1=int(Pnumber)-1
+    elif Pnumber=='9':
+        r1=int(Pnumber)-1
+    elif Pnumber=='r':
+        r1=random.randrange(1,9)
+    else:
+        print('올바르지 않은 입력입니다.')
+        break
+    mainlist=list[int(r1)]
     r2=random.randrange(1,len(mainlist))
     string=mainlist[r2]
     problem=string.split(' ')
-    print(problem)
+    random.shuffle(problem)
     answer=input('답 입력')
     if answer==string:
-        print('정답!')
-    elif answer=='quit':
+        print('\n정답!\n')
+    elif answer=='q':
         boolean=False
     else:
-        print('오답!')
+        print('\n오답!\n')
         print(string)
         print(answer)
+        print()
 
